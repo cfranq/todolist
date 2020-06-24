@@ -21,13 +21,13 @@ todoListController.getDescription = (req, res, next) => {
         message: { err: "An error occurred" },
       });
     });
-
+  };
 
     todoListController.addDescription = (req, res, next) => {
       // write code here
 
       next();
     };
-};
+
 
 module.exports= todoListController;

@@ -20,9 +20,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
  */
 app.use('/api', apiRouter);
 
-// respond with main app
-app.get('/', (req, res) => res.status(200).sendFile(path.resolve(__dirname, 'index.html')));
-
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) => res.sendStatus(404));
 
@@ -44,6 +41,6 @@ app.use((req, res) => res.sendStatus(404));
 
 app.get("/", (req, res) => {res.sendFile(path.resolve(__dirname, "../index.html"));});
 
-app.listen(3000, () => {  console.log('listening on 3000');});
+app.listen(8080, () => {  console.log('listening on 8080');});
 
 module.exports = app;
